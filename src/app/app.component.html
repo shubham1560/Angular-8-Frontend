@@ -318,7 +318,7 @@
     </a>
 </div>
 <br>
-<div style="padding-left: 15px">
+<div style="padding-left: 15px" [ngStyle]="{'background-color': mychoice}">
     <b>Time Right Now:</b> {{today}} {{counter}} {{bind}}
     <button (click)="click($event)">Click me!</button>
     <button (click)="clickTest(bind)">counter</button>
