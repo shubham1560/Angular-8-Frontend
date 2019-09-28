@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
+import { DataApiService } from './data-api.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    DataApiService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

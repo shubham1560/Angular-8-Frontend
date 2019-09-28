@@ -1,5 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 
+import { DataApiService } from './data-api.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,10 +13,17 @@ export class AppComponent implements OnInit{
   today = new Date();
   bind = "bundes";
   counter = 0;
-  mychoice = "green";
+  mychoice = "white";
+
+  persons = [];
+
+  constructor(private people: DataApiService) {}
 
   ngOnInit() { 
-    console.log("conmponent Initiated");
+    console.log(this.persons);
+    this.persons = this.people.allPeople();
+    console.log(this.persons);
+    
   }
 
 

@@ -324,6 +324,10 @@
     <button (click)="clickTest(bind)">counter</button>
     <input type="text" name="" id="" [(ngModel)]="bind" />
 
+    <div *ngFor="let person of persons" [ngClass]="{'active':person.name=='John'}">
+        {{person.name}}
+    </div>
+
 </div>
 
 <div class="content" role="main">
